@@ -1,3 +1,11 @@
 require('../database/database');
+const express = require('express');
+const app = express();
 
-// module.exports = settings;
+
+const notasApiRoute = require('../routes/api/notas');
+
+
+app.use('/api/notas', notasApiRoute);
+
+module.exports = app;

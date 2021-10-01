@@ -1,9 +1,10 @@
 const Notas = require('../models/Notas');
 
-const getNotas = (req, res )=>{
-    const notas = Notas.findAll();
-
-    console.log(`Notas: ${notas}` );
+const getNotas = async (req, res )=>{
+    const notas = await Notas.findAll();
+    return res.json({
+        'data': notas
+    });
 }
 
 exports.getNotas = getNotas;

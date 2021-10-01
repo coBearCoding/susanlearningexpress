@@ -20,9 +20,10 @@ const Notas = sequelize.define('Notas',{
     }
 },
 {
-    tableName: 'notas'
+    tableName: 'notas',
+    timestamps: false
 });
 
-console.log(User === sequelize.models.Notas );
+console.log(Notas === sequelize.models.Notas );
 
 module.exports = Notas;
